@@ -1,0 +1,32 @@
+ Scanner sc=new Scanner(System.in);
+  /* bakiye (başlangıç bakiyesi 1000tl) öğrenme,para yatırma çekme,çıkış işlemlerinin yapıldığı bir atm
+         app.code create edizniz.
+         */
+
+        int sayi= sc.nextInt();
+        int bakiye=1000;
+        int islem;
+        islem= sc.nextInt();
+
+        System.out.println("1:bakiye görüntüle");
+        System.out.println("2: para yatırma");
+        System.out.println("3:para çekme");
+        System.out.println("4:atm çıkışı");
+        switch (islem) {
+            case 1:
+                System.out.println("bakiyeniz" + bakiye + "dolar");
+                break;
+            case 2:
+                System.out.println("nekdar yatıracaksın? kardeşim");
+                int miktar = sc.nextInt();
+                bakiye += miktar;
+            case 3: System.out.println("bakiyeniz:" + bakiye + "dolar dir");
+                break;
+            case 4:
+                System.out.println("sistemden çıkıyorsunuz");
+                break;
+            default:
+                System.out.println(" bol şanslar");
+
+
+        }
