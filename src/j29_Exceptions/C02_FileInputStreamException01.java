@@ -8,7 +8,7 @@ public class C02_FileInputStreamException01 {
     /*
 
      Dosya okuma/yazma işlemi bu işlemlerde hata olasılığı yüksek olduğundan hata kontrolü zorunlu tutuluyor.
-     bu yüzden try-catch e alınması bu kodun zorunlu tutuluyor. bu gibi surumlara karşılk gelen hatalara Checked Exception denir
+     bu yüzden try-catch e alınması bu kodun zorunlu tutuluyor. bu gibi sorunlara karşılk gelen hatalara Checked Exception denir
      Özellikle IO(input output) işlemleri CHECKED EXCEPTİON dur.
 
 
@@ -33,14 +33,20 @@ Class'inin parent class Hz.Adem
 
 // ilgili dosyaya ulaşmak için fis obj tanımlandı parametre olarak ulaşılacal dosya yolu (path)girildi
         //fileNotFoundException->ADRES YANLIŞSA CONTROLU
-
+/*
+*
+*
+* eeğer bir method da checked (cte riski olan excp.)exception varasa method signature (method name'den sonraki bölüm)hata uyarısı aldı
+* altı kırmızı çizgi verir  komutun derleenmesine izin vermez ve kodd üzerine geldiğimde Add...   exception handle etme tavsiye eder otamatih throws excp eklenir.
+Bu şekilde methodu call eden komutlat try-catch alınması garanti edilmiş olur.
+* */
 
         int k;
         while ((k=fis.read())!=-1){//IOException-> evde yoksa kontrolu
             System.out.print((char) k);//k int asci olan file değeri char içicasting ->type dönşümü
         }
 
-
+        System.out.println("agam sorun handle edildi");
 
     }
 }
